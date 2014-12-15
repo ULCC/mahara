@@ -1,0 +1,17 @@
+<!-- @license http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later -->
+<!-- @copyright For copyright information on Mahara, please see the README file distributed with this software. -->
+<h3>Username for external authentication</h3>
+<p>When a user is authenticated by some service external to the site,
+this field contains the identifier for the user on the remote service.
+It is possible for a user to have several remote usernames stored in
+Mahara, but each one must be associated with a different external
+authentication method.</p>
+<p>The current rules for the update of this field are as follows:</p>
+<ul>
+  <li>If you wipe the contents of this field and submit your changes,
+  the external username associated with the selected authentication
+  method will be reset to the default username.</li>
+  <li>If you update the contents of this field, the external username
+  will be reset for this authentication method, or a new one will be
+  created if it doesn't exist yet.</li>
+</ul>

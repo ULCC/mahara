@@ -1,0 +1,14 @@
+Select2
+=======
+
+Website: http://ivaynberg.github.io/select2/
+Version: 3.4.8
+
+Select2 is a jQuery-based replacement for <select> browser elements. It turns them into snazzy
+interactive widgets, supports searching, ajax, and infinite scrolling of results.
+
+Changes:
+* Moved CSS and images into Mahara theme directory
+* Removed CSS file for Bootstrap framework
+* Removed package manager metadata files
+* Added styling to decrease size of text in the menus

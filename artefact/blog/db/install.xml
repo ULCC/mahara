@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="lib/db" VERSION="20061127" COMMENT="XMLDB file for Mahara's blog-related tables"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+<TABLES>
+
+    <!-- This table is supposed to have a 1-1 relation with every row in the
+    artefact table with artefacttype = 'blogpost'.  It contains additional data
+    that isn't in the artefact table. -->
+    <TABLE NAME="artefact_blog_blogpost">
+        <FIELDS>
+            <FIELD NAME="blogpost" TYPE="int" LENGTH="10" NOTNULL="true" />
+            <FIELD NAME="published" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" UNSIGNED="true" />
+        </FIELDS>
+
+        <KEYS>
+            <KEY NAME="blogpostpk" TYPE="primary" FIELDS="blogpost" />
+            <KEY NAME="blogpostfk" TYPE="foreign" FIELDS="blogpost" REFTABLE="artefact" REFFIELDS="id" />
+        </KEYS>
+    </TABLE>
+</TABLES>
+</XMLDB>

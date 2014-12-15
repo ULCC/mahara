@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="lib/db" VERSION="20060926" COMMENT="XMLDB file for Mahara files plugin tables"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+<TABLES>
+    <TABLE NAME="artefact_file_files">
+        <FIELDS>
+            <FIELD NAME="artefact" TYPE="int" LENGTH="10" NOTNULL="true" />
+            <FIELD NAME="size" TYPE="int" LENGTH="10" NOTNULL="false" />
+            <FIELD NAME="oldextension" TYPE="text" NOTNULL="false" />
+            <FIELD NAME="fileid" TYPE="int" LENGTH="10" NOTNULL="false" />
+            <FIELD NAME="filetype" TYPE="text" NOTNULL="false" />
+        </FIELDS>
+        <KEYS>
+            <KEY NAME="artefactpk" TYPE="primary" FIELDS="artefact" />
+            <KEY NAME="artefactfk" TYPE="foreign" FIELDS="artefact" REFTABLE="artefact" REFFIELDS="id" />
+        </KEYS>
+    </TABLE>
+    <TABLE NAME="artefact_file_image">
+        <FIELDS>
+            <FIELD NAME="artefact" TYPE="int" LENGTH="10" NOTNULL="true" />
+            <FIELD NAME="width" TYPE="int" LENGTH="10" NOTNULL="false" />
+            <FIELD NAME="height" TYPE="int" LENGTH="10" NOTNULL="false" />
+        </FIELDS>
+        <KEYS>
+            <KEY NAME="artefactpk" TYPE="primary" FIELDS="artefact" />
+            <KEY NAME="artefactfk" TYPE="foreign" FIELDS="artefact" REFTABLE="artefact" REFFIELDS="id" />
+        </KEYS>
+    </TABLE>
+        <TABLE NAME="artefact_file_mime_types">
+            <FIELDS>
+                <FIELD NAME="mimetype" TYPE="char" LENGTH="128" NOTNULL="true"/>
+                <FIELD NAME="description" TYPE="char" LENGTH="32" NOTNULL="true"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="mimetype"/>
+            </KEYS>
+        </TABLE>
+</TABLES>
+</XMLDB>

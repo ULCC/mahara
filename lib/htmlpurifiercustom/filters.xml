@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<filters>
+    <filter>
+        <filename>Skype</filename>
+        <site>http://skype.com</site>
+    </filter>
+    <filter>
+        <filename>Twitter</filename>
+        <site>http://twitter.com</site>
+    </filter>
+</filters>

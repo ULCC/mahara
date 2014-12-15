@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="artefact/resume/db" VERSION="20060926" COMMENT="XMLDB file for resume tables"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+    <TABLES>
+        <TABLE NAME="artefact_resume_personal_information">
+            <FIELDS>
+                <FIELD NAME="artefact" TYPE="int" LENGTH="10" NOTNULL="true" />
+                <FIELD NAME="dateofbirth" TYPE="datetime" NOTNULL="false" />
+                <FIELD NAME="placeofbirth" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="citizenship" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="visastatus" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="gender" TYPE="char" LENGTH="6" ENUM="true" ENUMVALUES="'female', 'male'" NOTNULL="false"/>
+                <FIELD NAME="maritalstatus" TYPE="text" NOTNULL="false" />
+            </FIELDS>
+            <KEYS> 
+                <KEY NAME="primary" TYPE="primary" FIELDS="artefact" />
+                <KEY NAME="artefactfk" TYPE="foreign" FIELDS="artefact" REFTABLE="artefact" REFFIELDS="id" />
+            </KEYS>                                              
+        </TABLE>
+        <TABLE NAME="artefact_resume_employmenthistory"> 
+            <FIELDS> 
+                <FIELD NAME="id" TYPE="int" LENGTH="10" SEQUENCE="true" NOTNULL="true" />
+                <FIELD NAME="artefact" TYPE="int" LENGTH="10" NOTNULL="true" />
+                <FIELD NAME="startdate" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="enddate" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="employer" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="employeraddress" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="jobtitle" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="positiondescription" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="displayorder" TYPE="int" LENGTH="10" NOTNULL="true" />
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+                <KEY NAME="artefactfk" TYPE="foreign" FIELDS="artefact" REFTABLE="artefact" REFFIELDS="id" />
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="artefact_resume_educationhistory"> 
+            <FIELDS> 
+                <FIELD NAME="id" TYPE="int" LENGTH="10" SEQUENCE="true" NOTNULL="true" />
+                <FIELD NAME="artefact" TYPE="int" LENGTH="10" NOTNULL="true" />
+                <FIELD NAME="startdate" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="enddate" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="qualtype" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="qualname" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="institution" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="institutionaddress" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="qualdescription" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="displayorder" TYPE="int" LENGTH="10" NOTNULL="true" />
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+                <KEY NAME="artefactfk" TYPE="foreign" FIELDS="artefact" REFTABLE="artefact" REFFIELDS="id" />
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="artefact_resume_certification">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" SEQUENCE="true" NOTNULL="true" />
+                <FIELD NAME="artefact" TYPE="int" LENGTH="10" NOTNULL="true" />
+                <FIELD NAME="date" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="title" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="description" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="displayorder" TYPE="int" LENGTH="10" NOTNULL="true" />
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+                <KEY NAME="artefactfk" TYPE="foreign" FIELDS="artefact" REFTABLE="artefact" REFFIELDS="id" />
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="artefact_resume_book">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" SEQUENCE="true" NOTNULL="true" />
+                <FIELD NAME="artefact" TYPE="int" LENGTH="10" NOTNULL="true" />
+                <FIELD NAME="date" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="title" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="contribution" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="description" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="url" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="displayorder" TYPE="int" LENGTH="10" NOTNULL="true" />
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+                <KEY NAME="artefactfk" TYPE="foreign" FIELDS="artefact" REFTABLE="artefact" REFFIELDS="id" />
+            </KEYS>
+        </TABLE>
+         <TABLE NAME="artefact_resume_membership">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" SEQUENCE="true" NOTNULL="true" />
+                <FIELD NAME="artefact" TYPE="int" LENGTH="10" NOTNULL="true" />
+                <FIELD NAME="startdate" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="enddate" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="title" TYPE="text" NOTNULL="true" />
+                <FIELD NAME="description" TYPE="text" NOTNULL="false" />
+                <FIELD NAME="displayorder" TYPE="int" LENGTH="10" NOTNULL="true" />
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+                <KEY NAME="artefactfk" TYPE="foreign" FIELDS="artefact" REFTABLE="artefact" REFFIELDS="id" />
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>

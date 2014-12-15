@@ -1,0 +1,8 @@
+TODOs for export HTML plugin
+============================
+
+* i18n
+* G&D
+* Documentation
+ - developer
+ - end-user

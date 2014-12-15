@@ -1,0 +1,11 @@
+<!-- @license http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later -->
+<!-- @copyright For copyright information on Mahara, please see the README file distributed with this software. -->
+<h3>Elasticsearch analyzer</h3>
+
+<p>The Elasticsearch analyzer performs the analysis process of the search database.</p>
+<p>The Maraha system uses the built-in <strong>mahara_analyzer</strong>.</p>
+<p><a href="http://www.elasticsearch.org/guide/reference/index-modules/analysis/custom-analyzer/">Read the Elasticsearch instructions</a> if you wish to use a different analyzer.</p>
+<p>This setting cannot be changed through the web interface. You may change it by setting a value in your config.php file for the following config variable:</p>
+<p><code>$cfg->plugin_search_elasticsearch_analyzer</code>.</p>
+<p>It is recommended that you don't change the default "mahara_analyzer"
+unless you know what you are doing.</p>

@@ -1,0 +1,16 @@
+TinyMCE
+========
+
+Website: http://tinymce.moxiecode.com/
+Version: 4.0.16
+
+Based on development version
+
+Changes:
+
+ * Added all of the language packs
+ * Removed all .min.js and .dev.js files
+ * Removed all files in 'classes' directory since they're packaged into tinymce.js
+ * Removed all .less files from skin
+ * Added rpc.php to the spellchecker plugin to use server side processing rather than client side
+ * Added maharaimage plugin (supports adding attachments)

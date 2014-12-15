@@ -1,0 +1,54 @@
+jQuery UI in Mahara
+===================
+
+This javascript library is required for the flexible page layout feature developed by Mike Kelly.
+
+Website: http://jqueryui.com/
+Version: 1.10.2
+Dependency package: jquery 2.1.1
+
+Changes:
+
+* Added call to function after datepicker arrow key is pressed - to
+allow the year arrows to be re-added on day change
+
+Notes:
+
+* Tried using jquery-ui version 1.10.4 but there is a bug in it with
+draggable helper function and scroll offset, that is meant to be fixed
+for version 1.11. See http://bugs.jqueryui.com/ticket/9315
+
+
+jQuery UI plugin Timepicker
+===========================
+
+This javascript library is required in conjunction with Datepicker
+(which is part of jQuery UI) to allow for choosing dates with time
+component.
+
+Website: http://trentrichardson.com/examples/timepicker/
+Version: 1.4.5
+Dependency package: jquery-ui
+
+Changes:
+
+* Added key bindings for the increasing/decreasing of the hour/minute bars
+* Added css tweaking into the theme/raw/static/style/datepicker.css
+
+
+jQuery UI plugin touch-punch
+============================
+
+This javascript library is required for jQuery UI draggable / droppable / sortable to work on mobile devices
+
+Website: http://touchpunch.furf.com/
+Version: 0.2.3
+Dependency package: jquery-ui
+
+Changes:
+
+* None
+
+Notes:
+
+* Touch Punch works by using simulated events to map touch events to their mouse event analogs.
