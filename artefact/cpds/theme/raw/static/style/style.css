@@ -1,0 +1,58 @@
+/**
+ * CSS rules for the cpds artefact plugin
+ *
+ * Copyright (C) 2006-2009 Catalyst IT
+ * This file is distributed under the same terms as Mahara itself
+ */
+th.cpdscontrols {
+    width: 40px; !important;
+}
+
+#cpdswrap table {
+	width: 100%;
+}
+
+#cpdswrap table td {
+    text-align: left;
+}
+#cpdswrap table td.right {
+    text-align: right;
+}
+
+#cpdswrap table th {
+	text-align: left;
+	padding: 0.25em;
+}
+
+#cpdswrap table th.right {
+	text-align: right;
+	padding: 0.25em;
+}
+
+#container #cpdswrap table td.errmsg {
+   padding-left: 20px;
+}
+
+fieldset legend.cpdsh3 a {
+	background: none;
+	padding: 0;
+}
+
+ul.cpdslist {
+	margin: 0;
+}
+ul.cpdslist li {
+	list-style: none;
+	margin: 0 0 3px 0;
+}
+.codesc {
+	font-size: .9167em;
+}
+#activitieslist td {
+	padding: 3px 5px 3px 5px;
+}
+.summaryhours {
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+	border-color: #cccccc;	
+}
